@@ -1,6 +1,6 @@
 {
 	"name": "@xinminlabs/react-diff-viewer",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"private": false,
 	"description": "A simple and beautiful text diff viewer component made with diff and React",
 	"keywords": [
@@ -26,7 +26,8 @@
 		"publish:examples:local": "NODE_ENV=production yarn build:examples && gh-pages -d examples/dist",
 		"start:examples": "webpack-dev-server --open --hot --inline",
 		"test": "mocha --require ts-node/register --require enzyme.ts ./test/**",
-		"test:watch": "mocha --require ts-node/register --require enzyme.ts --watch-extensions ts,tsx --watch ./test/**"
+		"test:watch": "mocha --require ts-node/register --require enzyme.ts --watch-extensions ts,tsx --watch ./test/**",
+        "prepack": "yarn run build"
 	},
 	"dependencies": {
 		"classnames": "^2.2.6",
