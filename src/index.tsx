@@ -303,7 +303,7 @@ class DiffViewer extends React.Component<
 		index: number,
 	): JSX.Element => {
 		return (
-			<tr key={index} className={this.styles.line}>
+			<tr id={String(left.lineNumber || right.lineNumber)} key={index} className={this.styles.line}>
 				{this.renderLine(
 					left.lineNumber,
 					left.type,
